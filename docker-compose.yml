@@ -14,6 +14,6 @@ services:
           - ./:/api
         depends_on:
           - mongodb
-        command: 'npm run dev'
+        command: 'npm start'
         environment:
           - MONGODB_URI=mongodb://mongodb/seca-sample
