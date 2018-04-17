@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebdfc9d5-db30-4cd7-b68b-5eee6cf69ae2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/gif-list/gif-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/gif-list/gif-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/gif/gif.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/gif/gif.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/giphy-search.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/giphy-search.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/gif/gif.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/gif/gif.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
