@@ -14,6 +14,16 @@ services:
           - ./:/api
         depends_on:
           - mongodb
-        command: 'npm start'
+        command: npm run dev
         environment:
           - MONGODB_URI=mongodb://mongodb/seca-sample
+  ui:
+        image: johnpapa/angular-cli
+        ports:
+          - 4200:4200
+        working_dir: /ui
+        volumes:
+          - ./ui:/ui
+        depends_on:
+          - api
+        command: 'ng serve'

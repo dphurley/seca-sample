@@ -10,6 +10,5 @@ export class AppComponent {
 
   onSearch(newGifs: []) {
     this.gifs = newGifs;
-    this.counter++;
   }
 }

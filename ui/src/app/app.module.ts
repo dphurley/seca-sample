@@ -8,8 +8,10 @@ import {GifComponent} from './gif/gif.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import {GiphySearchService} from './giphy-search.service';
-import { GifSearchComponent } from './gif-search/gif-search.component';
+import {GifSearchComponent} from './gif-search/gif-search.component';
 import {FormsModule} from '@angular/forms';
+import {FavoriteGifService} from './favorite-gif.service';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   providers: [
-    GiphySearchService
+    GiphySearchService,
+    FavoriteGifService
   ],
   bootstrap: [AppComponent]
 })

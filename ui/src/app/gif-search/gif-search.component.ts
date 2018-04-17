@@ -11,6 +11,7 @@ export class GifSearchComponent implements OnInit {
   // This will call the `onSearch` function of the <app> component
   // We are type-checking to make sure the event only passes an array
   @Output() onSearch = new EventEmitter<[]>();
+  searchTerm = ''
 
   // This constructor injects a `this.giphySearchService` instance
   // and binds it to our class. !!! Don't forget `private` !!!
@@ -25,5 +26,8 @@ export class GifSearchComponent implements OnInit {
       .subscribe((response) => {
         this.onSearch.emit(response.data);
       });
+  }
+
+  ngOnInit() {
   }
 }

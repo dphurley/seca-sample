@@ -14,7 +14,7 @@ export class GifListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.giphySearchService.searchForGifs()
+    this.giphySearchService.searchForGifs('dog')
       .subscribe((response) => {
           this.gifs = response.data;
         }
