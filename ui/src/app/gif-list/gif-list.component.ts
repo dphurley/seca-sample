@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {GiphySearchService} from '../giphy-search.service';
 
 @Component({
@@ -8,7 +8,7 @@ import {GiphySearchService} from '../giphy-search.service';
 })
 export class GifListComponent implements OnInit {
 
-  gifs = [];
+  @Input() gifs;
 
   constructor(private giphySearchService: GiphySearchService) {
   }

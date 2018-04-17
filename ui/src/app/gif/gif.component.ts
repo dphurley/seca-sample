@@ -9,10 +9,4 @@ export class GifComponent implements OnInit {
 
   @Input() gif;
 
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
 }

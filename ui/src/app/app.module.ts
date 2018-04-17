@@ -8,16 +8,20 @@ import {GifComponent} from './gif/gif.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import {GiphySearchService} from './giphy-search.service';
+import { GifSearchComponent } from './gif-search/gif-search.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     GifListComponent,
-    GifComponent
+    GifComponent,
+    GifSearchComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     GiphySearchService
