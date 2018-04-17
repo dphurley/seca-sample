@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {FavoriteGifService} from "../favorite-gif.service";
 
 @Component({
   selector: 'app-favorite-gif',
@@ -9,9 +10,16 @@ export class FavoriteGifComponent implements OnInit {
 
   @Input() gif;
 
-  constructor() { }
+  constructor(private favoriteGifService: FavoriteGifService) { }
 
   ngOnInit() {
+  }
+
+  deleteGif(gifId){
+    this.favoriteGifService.deleteGif(gifId)
+      .subscribe((response) => {
+        console.log(response)
+      })
   }
 
 }

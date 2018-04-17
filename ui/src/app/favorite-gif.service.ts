@@ -20,4 +20,8 @@ export class FavoriteGifService {
     return this.httpClient.get<>('/api/favorites')
   }
 
+  deleteGif(gifId) {
+    return this.httpClient.delete(`/api/favorites/${gifId}`)
+  }
+
 }
