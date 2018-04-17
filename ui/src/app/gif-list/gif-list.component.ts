@@ -14,10 +14,11 @@ export class GifListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.giphySearchService.searchForGifs().subscribe(response => {
-        this.gifs = response.data;
-      }
-    );
+    this.giphySearchService.searchForGifs()
+      .subscribe((response) => {
+          this.gifs = response.data;
+        }
+      );
   }
 
 }
