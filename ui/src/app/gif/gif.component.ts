@@ -22,7 +22,7 @@ export class GifComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+
   }
 
 }

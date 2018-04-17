@@ -16,4 +16,8 @@ export class FavoriteGifService {
     );
   }
 
+  getFavorites() {
+    return this.httpClient.get<>('/api/favorites')
+  }
+
 }

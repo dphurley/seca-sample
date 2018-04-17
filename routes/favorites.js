@@ -16,4 +16,14 @@ router.post('/', async (request, response) => {
 
 });
 
+router.get('/', async (request, response) => {
+  try {
+    const favoriteGifs = await FavoriteGif.find({})
+    response.json(favoriteGifs)
+  } catch(error) {
+    console.log(error)
+    console.log('Error adding new favorite gif!!!')
+  }
+})
+
 module.exports = router;
