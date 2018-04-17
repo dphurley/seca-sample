@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {GiphySearchService} from '../giphy-search.service';
 
 @Component({
   selector: 'app-gif-list',
@@ -10,13 +10,14 @@ export class GifListComponent implements OnInit {
 
   gifs = [];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private giphySearchService: GiphySearchService) {
+  }
 
   ngOnInit() {
-    this.httpClient.get<>('http://api.giphy.com/v1/gifs/search?api_key=rOgR2hv14OvffKYnDfKmeBNiaF2m6TQb&q=cheeseburger')
-      .subscribe(response => {
+    this.giphySearchService.searchForGifs().subscribe(response => {
         this.gifs = response.data;
-      });
+      }
+    );
   }
 
 }
