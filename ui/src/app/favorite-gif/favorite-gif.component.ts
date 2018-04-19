@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FavoriteGifService} from "../favorite-gif.service";
 
 @Component({
@@ -9,16 +9,21 @@ import {FavoriteGifService} from "../favorite-gif.service";
 export class FavoriteGifComponent implements OnInit {
 
   @Input() gif;
+  @Output() removeDeletedGif = new EventEmitter<string>();
 
-  constructor(private favoriteGifService: FavoriteGifService) { }
+  constructor(private favoriteGifService: FavoriteGifService) {
+  }
 
   ngOnInit() {
   }
 
-  deleteGif(gifId){
+  deleteGif(gifId) {
+    console.log(gifId)
+    this.removeDeletedGif.emit(gifId);
     this.favoriteGifService.deleteGif(gifId)
       .subscribe((response) => {
-        console.log(response)
+        console.log('hello');
+
       })
   }
 

@@ -1,7 +1,14 @@
 <div>
+  <a href="/">Search for Gifs</a>
+
   <h2>Favorites</h2>
   <div>
-    <app-favorite-gif *ngFor="let gif of favoriteGifs" [gif]="gif"></app-favorite-gif>
+    <div [hidden]="favoriteGifs.length">No favorites yet!</div>
+    <app-favorite-gif
+      *ngFor="let gif of favoriteGifs"
+      [gif]="gif"
+      (removeDeletedGif)="removeDeletedGif($event)">
+    </app-favorite-gif>
   </div>
 
 </div>

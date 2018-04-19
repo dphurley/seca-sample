@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Gif} from "./types/gif";
 
 @Injectable()
 export class GiphySearchService {
@@ -9,7 +10,9 @@ export class GiphySearchService {
 
   searchForGifs(searchTerm: string) {
     return this.httpClient
-      .get<>(`http://api.giphy.com/v1/gifs/search?api_key=rOgR2hv14OvffKYnDfKmeBNiaF2m6TQb&q=${searchTerm}`);
+      .get<Gif[]>(
+        `http://api.giphy.com/v1/gifs/search?api_key=rOgR2hv14OvffKYnDfKmeBNiaF2m6TQb&q=${searchTerm}`
+      );
   }
 
 }

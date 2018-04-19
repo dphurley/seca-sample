@@ -13,6 +13,13 @@ export class FavoritesListComponent implements OnInit {
   constructor(private favoriteGifService: FavoriteGifService) {
   }
 
+  removeDeletedGif(gifId) {
+    const indexToRemove = this.favoriteGifs.findIndex((gif) => {
+      return gif._id === gifId;
+    });
+    this.favoriteGifs.splice(indexToRemove, 1)
+  }
+
   ngOnInit() {
     this.favoriteGifService.getFavorites()
       .subscribe((response) => {

@@ -16,7 +16,7 @@ export class GifComponent implements OnInit {
   addToFavorites() {
     this.favoriteGifService.addNewFavorite(this.gif)
       .subscribe((response) => {
-          console.log(response.data);
+          console.log(response['data']);
         }
       );
   }

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {GiphySearchService} from '../giphy-search.service';
+import {Gif} from "../types/gif";
 
 @Component({
   selector: 'app-gif-search',
@@ -10,7 +11,7 @@ export class GifSearchComponent implements OnInit {
 
   // This will call the `onSearch` function of the <app> component
   // We are type-checking to make sure the event only passes an array
-  @Output() onSearch = new EventEmitter<>();
+  @Output() onSearch = new EventEmitter<Gif[]>();
   searchTerm = '';
 
   // This constructor injects a `this.giphySearchService` instance
@@ -24,7 +25,7 @@ export class GifSearchComponent implements OnInit {
   onSubmit() {
     this.giphySearchService.searchForGifs(this.searchTerm)
       .subscribe((response) => {
-        this.onSearch.emit(response.data);
+        this.onSearch.emit(response['data']);
       });
   }
 
